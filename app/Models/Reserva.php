@@ -15,6 +15,7 @@ class Reserva extends Model
         'usuario_id',
         'espacio_id',
         'clase_id',
+        'reserva_clase_id',
         'tipo_reserva',
         'horario_reserva',
     ];
@@ -32,5 +33,10 @@ class Reserva extends Model
     public function clase()
     {
         return $this->belongsTo(Clase::class);
+    }
+
+    public function slotHorarioClase()
+    {
+        return $this->belongsTo(ReservaClase::class, 'reserva_clase_id');
     }
 }

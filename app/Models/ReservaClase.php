@@ -13,8 +13,9 @@ class ReservaClase extends Model
 
     protected $fillable = [
         'clase_id',
-        'horario_reserva',
-        'capacidad_actual',
+        'dia_semana',
+        'hora_inicio',
+        'duracion_minutos',
         'capacidad_maxima',
     ];
 
